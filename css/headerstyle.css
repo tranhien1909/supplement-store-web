@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    height: 53px;
+    overflow: hidden;
+}
+
+.logo-text {
+    margin-left: 10px; /* Khoảng cách giữa logo và chữ */
+    font-size: 17px; /* Kích thước chữ */ /* Màu sắc chữ */
+    font-weight: bold;
+    color: #466E73; /* Đậm chữ */
+}
+
+.logo {
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #466E73;
+    margin-left: 40px; /* Có thể tùy chỉnh màu sắc của đường viền */
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    font-size: 15px; /* Đặt kích thước chiều rộng */ /* Đặt kích thước chiều cao */
+    border: 1px solid #466E73;
+    border-radius: 20px 0 0 20px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    color: white;
+    cursor: pointer;
+    height: 36px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #004a99; 
+    margin-right: 10px;
+    margin-left: 10px; 
+}
+
+.cart {
+    margin-left: 10px; 
+    padding-bottom: 4px; 
+    font-size: 16px;
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+}
+
+.account-link {
+    text-decoration: none;
+    color: #466E73; /* Màu sắc của biểu tượng */
+}
+.main-menu {
+    padding: 10px 0;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; 
+    width: 82%;
+}
+
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu ul li a i {
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+.main-menu .hot {
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .top-header { flex-direction: column; }
+    .search-bar { width: 100%; margin: 10px 0; }
+    .main-menu ul { flex-direction: column; align-items: center; }
+}

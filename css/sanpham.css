@@ -1,0 +1,199 @@
+.header-left::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 22px solid #466E73;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+.product-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi di chuột vào */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #466E73; /* Đổ bóng nhẹ */
+}
+.product-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+body{
+     background-color: #fafffd;
+}
+.page-container {
+    display: flex;
+    margin: 10px;/
+}
+
+.product-container {
+    text-align: center;
+    margin-left: 70px;
+}
+
+.product-container p {
+    font-size: 16px;
+    color: #666;
+}
+
+.product-item {
+    position: relative; /* Để sử dụng cho nhãn giảm giá */
+    background-color: #fff;
+    padding: 10px; /* Giữ padding hợp lý */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 350px; /* Đặt chiều cao cố định thành 400px */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn chỉnh nội dung theo chiều dọc */
+    border-radius: 8px;
+    width: 245px;
+    text-decoration: none;
+    border: #fff;
+}
+
+/* Định dạng cho nhãn giảm giá */
+.discount-label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: red; /* Màu nền cho nhãn giảm giá */
+    color: white; /* Màu chữ */
+    padding: 10px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px; 
+    text-decoration: none; /* Xóa gạch chân cho toàn bộ sản phẩm */
+}
+
+/* Định dạng cho hình ảnh sản phẩm */
+.product-item img {
+    max-width: 100%;
+    height: 170px; /* Đặt chiều cao cố định cho hình ảnh */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    margin: auto; /* Căn giữa hình ảnh theo cả chiều dọc và ngang */
+}
+
+/* Định dạng tiêu đề sản phẩm */
+.product-item h3 {
+    font-size: 16.5px;
+    margin-bottom: 10px;
+    color: #333;
+    height: 62px; /* Đặt chiều cao cố định cho tiêu đề */
+    overflow: hidden;
+    line-height: 1.25;
+}
+
+.price-container {
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa */
+    align-items: center; 
+    margin-top: 3px;
+}
+
+.price {
+    font-size: 18px;
+    color: red;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.luotban {
+    font-style: italic; /* Đặt chữ nghiêng */
+    color: black; /* Màu xám nhạt */
+    font-size: 16px; 
+    margin-right: 10px;
+}
+
+/* Định dạng nút "Thêm vào giỏ hàng" */
+.add-to-cart {
+    text-decoration: none;
+    background-color: #65A69A;
+    color: white;
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 150px;
+    margin-left: 35px;
+}
+
+.add-to-cart:hover {
+    background-color: #466E73;
+}
+
+.chinhsua {
+    text-decoration: none;
+    background-color: #65A69A;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 150px;
+    margin-left: 10px;
+}
+
+.chinhsua:hover {
+    background-color: #466E73;
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5e57;
+    color: white;
+    padding: 7px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    animation: blink 2s infinite; /* Hiệu ứng nhấp nháy */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.view-more {
+    text-align: center; /* Tăng khoảng cách giữa nút và danh sách sản phẩm */
+}
+
+.product-item h3,
+.product-item .price,
+.product-item .luotban {
+    text-decoration: none; /* Xóa gạch chân riêng cho từng thành phần */
+}
+.product-item .old-price {
+    text-decoration: line-through; /* Giữ gạch ngang cho giá gốc */
+    color: gray; /* Bạn có thể tùy chỉnh màu cho giá gốc nếu cần */
+}
+@media (max-width: 1200px) {
+    .page-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -20px;
+    }
+
+    .product-item {
+        width: 220px;
+        margin: 10px;
+    }
+}
+@media (max-width: 900px) {
+    .product-item {
+        grid-template-columns: repeat(3, minmax(200px, 1fr)); 
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+       grid-template-columns: repeat(2, minmax(200px, 1fr)); 
+    }
+}

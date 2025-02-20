@@ -1,0 +1,218 @@
+/* CSS cho modal */
+.modal {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed; /* Vị trí cố định */
+    z-index: 1001; /* Đặt trên cùng */
+    left: 0;
+    top: 0;
+    width: 100%; /* Toàn bộ chiều rộng */
+    height: 100%; /* Toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.5); /* Làm mờ nền */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Modal Đăng Nhập */
+#loginModal .modal-content {
+    background-color: white;
+    margin: 15% auto; /* Căn giữa */
+    padding: 20px;
+    border: 2px solid #466E73;
+    width: 380px; /* Chiều rộng của modal đăng nhập */
+    text-align: center; 
+    border-radius: 8px;/* Căn giữa nội dung */
+}
+
+#forgotPasswordModal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #466E73;
+    width: 380px; /* Đặt độ rộng của form, có thể điều chỉnh theo ý thích */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 8px;
+    text-align: center; /* Bo góc cho modal-content */
+    border-radius: 8px;
+}
+
+/* Modal Đăng Ký */
+#signupModal .modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #466E73;
+    width: 470px; /* Đặt độ rộng của form, có thể điều chỉnh theo ý thích */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 8px;
+    text-align: center; /* Bo góc cho modal-content */
+    border-radius: 8px;
+}
+
+/* Tiêu đề modal */
+.modal-content h2 {
+    font-weight: bold; /* Chữ đậm */
+    margin-bottom: 10px;
+    text-align: center; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Input fields */
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+    width: 100%; 
+    height: 40px; 
+    margin: 8px 0; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    text-indent: 15px;
+}
+
+/* Nút Đăng Nhập */
+.btn-login {
+    background-color: #65A69A; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    padding: 8px; /* Padding */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 30%; 
+    font-size: 14px; 
+    margin-top: 5px;
+}
+
+.btn-login:hover {
+    background-color: #466E73; /* Màu nền khi hover */
+}
+
+.btn-reset-password {
+    background-color: #65A69A; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    padding: 8px; /* Padding */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 70%; 
+    font-size: 14px; 
+}
+
+.btn-reset-password:hover {
+    background-color: #466E73; /* Màu nền khi hover */
+}
+
+.btnresetpassword {
+    background-color: #65A69A; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    padding: 8px; /* Padding */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 47%; 
+    font-size: 14px;
+    margin-top: 18px;
+    margin-left: 90px;
+}
+
+.btnresetpassword:hover {
+    background-color: #466E73; /* Màu nền khi hover */
+}
+
+.resetmk {
+    background-color: #65A69A; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    padding: 8px; /* Padding */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 47%; 
+    font-size: 14px;
+    margin-top: 18px;
+    margin-left: 40px;
+}
+
+.resetmk:hover {
+    background-color: #466E73; /* Màu nền khi hover */
+}
+/* Liên kết đăng ký */
+.register-link {
+    display: block; /* Hiển thị dưới dạng khối */
+    margin-top: 15px; /* Khoảng cách trên */
+    color: #004a99;
+    text-decoration: none; /* Màu chữ */
+}
+
+.login-link {
+    display: block; /* Hiển thị dưới dạng khối */
+    margin-top: 15px; /* Khoảng cách trên */
+    color: #004a99; 
+    text-decoration: none;
+    margin-bottom: 10px;/* Màu chữ */
+}
+
+/* Nút Đóng */
+.close {
+    color: #aaa; /* Màu của nút đóng */
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%; 
+    margin: auto; 
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+}
+
+td {
+    padding: 10px; /* Giảm padding giữa các ô */
+    font-weight: bold;
+}
+
+.bim {
+    background-color: #65A69A; /* Màu nền cho nút */
+    color: white; /* Màu chữ */
+    padding: 8px; /* Padding */
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    width: 30%; 
+    font-size: 14px; 
+}
+
+.dropdown {
+    display: block; /* Hiện hiển thị dưới tên người dùng */
+    margin-left: 5px; /* Khoảng cách giữa tên tài khoản và liên kết đăng xuất */
+}
+
+.logout-link {
+    color: blue; /* Màu sắc cho liên kết đăng xuất */
+    text-decoration: none; /* Bỏ gạch dưới */
+}
+
+.logout-link:hover {
+    text-decoration: underline; /* Gạch dưới khi hover */
+}
+
+.forgot-password-link {
+    display: block;
+    text-align: right; /* Canh phải */
+    margin-top: 5px; /* Khoảng cách trên */
+    margin-right: 10px; /* Khoảng cách phải */
+}
+
+#resetPasswordModal .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 2px solid #466E73;
+    width: 400px; /* Đặt độ rộng của form, có thể điều chỉnh theo ý thích */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border-radius: 8px;
+    text-align: center; /* Bo góc cho modal-content */
+    border-radius: 8px;
+}
+
